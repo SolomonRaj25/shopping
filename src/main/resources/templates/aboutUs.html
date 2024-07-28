@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>
+    <title>Online Shopping - My Cart</title>
+    <style>
+        body {
+            background-image: url("https://wallpaperaccess.com/full/2593105.jpg");
+            background-size: cover;
+        }
+        .fa-trash {
+            text-decoration: none;
+            color: red;
+        }
+        .fa-trash:hover {
+            color: crimson;
+        }
+        .table {
+            font-style: italic;
+            font-weight: bold;
+            border-color: transparent;
+        }
+        .navbar {
+            padding-bottom: 1px;
+            padding-top: 1px;
+        }
+        .container-fluid1 {
+            font-style: italic;
+            font-weight: bold;
+            position: absolute;
+            text-align: center;
+            background-color: darkcyan;
+            border-style: ridge;
+            bottom: 250px;
+            left: 438px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" th:href="@{/online_shopping/home/page}">
+                        <img src="https://thumbs.dreamstime.com/b/ff-logo-triangle-shape-circle-rounded-design-template-isolated-black-background-175181044.jpg" alt="" width="50" height="40" class="d-inline-block px-1 py-1">
+                    </a>
+                </li>
+                <li class="nav-item py-2">
+                    <a class="nav-link text-white" th:href="@{/online_shopping/home/page}"><h6 style="font-style: italic; font-size: 18px">Fashion Freaks</h6></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="container-fluid1">
+        <h5>In case of any concerns contact us on</h5>
+        <p>Helpline Number: +91-917634567</p>
+        <p>Email: solomonraj257@gmail.com</p>
+        <p>Keep In Touch with us</p>
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-instagram m-2"></i>
+        <i class="fa-brands fa-facebook m-1"></i>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

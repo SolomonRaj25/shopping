@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html, body {
+            background-image: url("https://i0.wp.com/segwitz.com/wp-content/uploads/2021/09/why-ecommerce-need-mobile-apps.jpg");
+            background-repeat: no-repeat;
+            background-size: 1280px 700px;
+            background-attachment: fixed;
+        }
+        .wrapper{
+            text-align: center;
+            margin-top: 200px;
+            margin-left: 320px;
+            width: 580px;
+            height: 100px;
+            background: #d9d9d9;
+            border-radius: 20px;
+<!--            padding-top: 50px;-->
+<!--            padding-bottom: 50px;-->
+            box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+        }
+        .wrapper form{
+            padding: 10px 30px 50px 30px;
+        }
+        .wrapper form .field label{
+            position: absolute;
+            padding-top: 50px;
+            top: 50%;
+            left: 20px;
+            color: #999999;
+            font-weight: 400;
+            font-size: 17px;
+            pointer-events: none;
+            transform: translateY(-30%);
+            transition: all 0.3s ease;
+        }
+        .wrapper .container {
+            background-color: cornflowerblue;
+            padding: 5px 3px;
+            border-radius: 3px;
+            color: black;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div th:if="${session.message}">
+        <div class="alert alert-success" role="alert">
+            <span th:text="${session.message.content}"></span><br>
+            <div class="container">
+                <a th:href="${session.message.url}" class="btn btn-primary" type="submit">Click the link</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

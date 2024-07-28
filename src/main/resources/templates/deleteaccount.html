@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Deactivation/Delete</title>
+    <style>
+        body {
+            background-image: url("https://i0.wp.com/segwitz.com/wp-content/uploads/2021/09/why-ecommerce-need-mobile-apps.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #app-title {
+            border: 1px solid black;
+            text-align: center;
+            font-family: 'Cooper Black', cursive;
+            padding: 10px 10px;
+            margin-top:2px;
+            background-image: linear-gradient(yellowgreen,chocolate);
+            border-radius:7px;
+        }
+        .d-container {
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 25%;
+            background-color: white;
+            max-width: 50%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+        .alert {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .button {
+            background-color: cornflowerblue;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-right: 10px;
+            border-radius: 3px;
+            border: none;
+            color: black;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="container my-3 p-2">
+    <h2 id="app-title">Fashion Freaks</h2>
+</div>
+<div class="d-container" th:object="${user}">
+    <div class="title">Delete My Account</div>
+    <p class="alert">ARE YOU SURE YOU WANT TO DELETE YOUR ACCOUNT?</p>
+    <p class="info">Deleting your account will remove all of your information from our database.</p>
+        <a class="button" type="button"
+           th:href="@{/online_shopping/user/deactivate_account/{email}(email=${user.email})}">
+            DELETE</a>
+        <a class="button" type="button" th:href="@{/online_shopping/home/page}">
+            CANCEL</a>
+</div>
+</body>
+</html>
